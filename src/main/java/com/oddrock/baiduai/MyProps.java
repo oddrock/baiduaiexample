@@ -1,7 +1,8 @@
 package com.oddrock.baiduai;
 
 public class MyProps {
-	public static final String APP_ID = "9740158";
-    public static final String API_KEY = "9uyvp9yyLiXBXGv95Qo72pjf";
-    public static final String SECRET_KEY = "oSQHO376hlGlfCYPGTgjda7O8PX6qy1N";
+	public static final PropertiesReader pr = new PropertiesReader("baiduaiexample.properties");
+	public static final String APP_ID = pr.getValue("baidu.ai.appid");
+    public static final String API_KEY = pr.getValue("baidu.ai.appkey");
+    public static final String SECRET_KEY = pr.getValue("baidu.ai.secretkey");
 }
