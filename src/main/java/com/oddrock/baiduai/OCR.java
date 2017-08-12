@@ -1,10 +1,7 @@
 package com.oddrock.baiduai;
 
 import java.util.HashMap;
-
 import org.json.JSONObject;
-
-import com.baidu.aip.nlp.ESimnetType;
 import com.baidu.aip.ocr.AipOcr;
 
 public class OCR {
@@ -17,7 +14,7 @@ public class OCR {
         client.setSocketTimeoutInMillis(60000);
 
         // 调用通用识别接口
-        String genFilePath = "c:\\456.jpg";
+        String genFilePath = "c:\\456.png";
         JSONObject genRes = client.basicGeneral(genFilePath, new HashMap<String, String>());
         System.out.println(genRes.toString(2));
     }
